@@ -1,8 +1,12 @@
 var state = { quadro: [], jogoAtual:[], jogoSalvo:[]}
 
+let jogoSalvoString = localStorage.getItem('jogoSalvo')
+    state.jogoSalvo = JSON.parse(jogoSalvoString)
+
 function start(){
    criarQuadro()
    renderNumeros()
+   salvandoJogo()
    
 }
 
@@ -130,6 +134,9 @@ function salvarJogo(){
     } else {
         alert('Jogo Não pode ser salvo, pois está incompleto')
     }
+    salvandoJogo()
+}
+function salvandoJogo(){
     divJogoSalvo = document.querySelector('#megasena-jogo-salvo')
     divJogoSalvo.innerHTML= ' '
     for(var i=0; i < state.jogoSalvo.length; i++){
@@ -144,13 +151,12 @@ function salvarJogo(){
                 var jogoAtual = state.jogoSalvo[i]
                 liJogoSalvo = document.createElement('li')
                 ulJogoSalvo.appendChild(liJogoSalvo)
-                liJogoSalvo.innerHTML = jogoAtual[li]
-                
+                liJogoSalvo.innerHTML = jogoAtual[li]  
             }
     }
-
-
+    localStorage.setItem('jogoSalvo', JSON.stringify(state.jogoSalvo))
 }
+
 function novojogo(){
     state.jogoAtual = []
     numerosJogados()
@@ -164,6 +170,7 @@ function reiniciarJogo(){
     divJogoSalvo = document.querySelector('#megasena-jogo-salvo')
     divJogoSalvo.innerHTML = ' '
     limparJogada()
+    localStorage.removeItem('jogoSalvo')
 }
 function limparJogada(){
     l1.classList.remove('escolhido')
