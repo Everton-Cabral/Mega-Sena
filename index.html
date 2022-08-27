@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mega Sena</title>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <h1>Mega Sena</h1>
+    </div>
+   
+
+   
+        <div id="megasena-numeros"></div>
+            <div class="resultado">
+
+               
+                    <ul id="ulJogada">
+                    <li class="liJogada" id="l1" onclick="removerNumero(0)"></li>
+                    <li class="liJogada" id="l2" onclick="removerNumero(1)"></li>
+                    <li class="liJogada" id="l3" onclick="removerNumero(2)"></li>
+                    <li class="liJogada" id="l4" onclick="removerNumero(3)"></li>
+                    <li class="liJogada" id="l5" onclick="removerNumero(4)"></li>
+                    <li class="liJogada" id="l6" onclick="removerNumero(5)"></li>
+                </ul> 
+            
+        </div>
+        <div id="megasena-botoes">
+            <button onclick="novojogo()">NOVO JOGO</button>
+            <button onclick="salvarJogo()">SALVAR</button>
+            <button onclick="megaSena()">MEGA SENA</button>
+            <button onclick="reiniciarJogo()">REINICIAR JOGO</button>
+        </div>
+        <div id="megasena-jogo-salvo"></div>
+   
+
+
+
+    <script defer src="js/script.js"></script>
+</body>
+</html>

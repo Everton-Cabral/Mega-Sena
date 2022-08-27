@@ -1,0 +1,183 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height:100vh ;
+    background-color:#FBFBEF;    
+}
+.nav-bar{
+    width: 100%;
+    height: 10%;
+    background-color: #40E0D0;
+    color: #FFFAFA;
+    font-style: italic;
+    font-size: 18px;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+#megasena-numeros{
+ 
+    width: 100%;
+    height: auto;
+    background-color: #F5F5F5;  
+}
+ #megasena-numeros li{
+    list-style: none;
+    border: solid 1px black;
+    width: 30px;
+    height: 27px;
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    align-items: center;
+    padding-top: 2px;
+    margin: 6px;
+    background-color: white;
+    box-shadow: 3px 3px 2px grey; 
+    transition: 0.5s;
+}
+#megasena-numeros li:hover{
+    background-color:#298A08 ;
+    color: white;
+    width: 36px;
+    height: 33px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.liJogada{
+    list-style: none;
+    border: solid 1px black;
+    width: 35px;
+    height: 32px;
+    border-radius: 100%;
+    font-size: 25px;
+    font-weight: 800;
+    align-items: center;
+    padding-top: 2px;
+    margin: 6px;
+    background-color: white;
+    box-shadow: 2px 3px 2px #F5A9A9;
+}
+ #megasena-numeros ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start; 
+}
+
+.resultado{
+    width: 100%;
+    height: 8%;
+    background-color: #F7BE81;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.escolhido{
+    background-color:#298A08;
+    color: white;
+    border-color: black;
+}
+.escolhido:hover{
+    background-color:#6E6E6E ;
+    cursor: pointer;
+}
+#ulJogada{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#megasena-botoes{
+    width: 100%;
+    height:10%;
+    display: flex;
+   flex-wrap: wrap;
+    background-color: #FBFBEF;
+    justify-content: center;
+}
+button{
+    width: 49.4%;
+    height: 40px;
+    background-color:#E6E6E6;
+    color: black;
+    border: solid 0.5px #D8D8D8;
+    margin: 1px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: #D8D8D8;
+    box-shadow: 2px 2px 2px grey;
+    cursor: pointer;
+}
+#megasena-jogo-salvo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-top: 5px;
+}
+#megasena-jogo-salvo li{
+    list-style: none;
+    border: solid 1px black;
+    background-color: grey;
+    color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    font-size: 12px;
+    align-items: center;
+    padding-top: 2px;
+    margin: 3px;
+}
+@media only screen and (min-width: 1001px) {
+   
+    .nav-bar{
+        font-size: 28px;
+    }
+    #megasena-numeros li{
+        width: 52px;
+        height: 46px;
+        font-size: 38px;
+        margin: 10px;
+    }
+    #megasena-numeros li:hover{
+        width: 58px;
+        height: 52px;
+        font-size: 44px;
+    }
+    .resultado{
+        height: 12%;
+    }
+    .liJogada{
+        width: 57px;
+        height: 51px;
+        font-size: 40px
+    }
+    #megasena-botoes{
+        flex-wrap: nowrap;
+    }
+    button{
+        height: 60px;
+        font-size: 20px;
+    }
+  }
