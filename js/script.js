@@ -1,7 +1,10 @@
 var state = { quadro: [], jogoAtual:[], jogoSalvo:[]}
 
 let jogoSalvoString = localStorage.getItem('jogoSalvo')
-    state.jogoSalvo = JSON.parse(jogoSalvoString)
+    if(JSON.parse(jogoSalvoString) > 1){
+        state.jogoSalvo = JSON.parse(jogoSalvoString)
+    }
+    
 
 function start(){
    criarQuadro()
@@ -46,7 +49,7 @@ function renderNumeros(){
 
 function addNumeroaoJogo(event){
     
-    console.log(typeof event)
+    
 
     if(typeof event == 'number' ){
         addNumero = event
@@ -60,11 +63,12 @@ function addNumeroaoJogo(event){
         return;
     }    
     function numeroInserido(numeroParaChecar){  
-        if(state.jogoAtual.includes(numeroParaChecar)){
-            return true
-        } else {
-            return false
-        }
+        // if(state.jogoAtual.includes(numeroParaChecar)){
+        //     return true
+        // } else {
+        //     return false
+        // }
+        return state.jogoAtual.includes(numeroParaChecar);
     }
     if( numeroInserido(addNumero)){
         alert('Esté número já está no jogo')
