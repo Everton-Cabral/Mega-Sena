@@ -63,11 +63,7 @@ function addNumeroaoJogo(event){
         return;
     }    
     function numeroInserido(numeroParaChecar){  
-        // if(state.jogoAtual.includes(numeroParaChecar)){
-        //     return true
-        // } else {
-        //     return false
-        // }
+       
         return state.jogoAtual.includes(numeroParaChecar);
     }
     if( numeroInserido(addNumero)){

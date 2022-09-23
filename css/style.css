@@ -47,9 +47,6 @@ body{
 #megasena-numeros li:hover{
     background-color:#298A08 ;
     color: white;
-    width: 36px;
-    height: 33px;
-    font-size: 24px;
     cursor: pointer;
 }
 .liJogada{
