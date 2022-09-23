@@ -1,15 +1,17 @@
 var state = { quadro: [], jogoAtual:[], jogoSalvo:[]}
 
-let jogoSalvoString = localStorage.getItem('jogoSalvo')
-    if(JSON.parse(jogoSalvoString) > 1){
-        state.jogoSalvo = JSON.parse(jogoSalvoString)
-    }
     
 
 function start(){
    criarQuadro()
    renderNumeros()
-   salvandoJogo()
+   let jogoSalvoString = localStorage.getItem('jogoSalvo')
+    if(JSON.parse(jogoSalvoString)){
+        state.jogoSalvo = JSON.parse(jogoSalvoString)
+        salvandoJogo()
+    } else{
+        state.jogoSalvo = []
+    }
    
 }
 
