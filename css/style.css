@@ -157,11 +157,7 @@ button:hover{
         font-size: 38px;
         margin: 10px;
     }
-    #megasena-numeros li:hover{
-        width: 58px;
-        height: 52px;
-        font-size: 44px;
-    }
+  
     .resultado{
         height: 12%;
     }
